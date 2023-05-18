@@ -44,4 +44,14 @@ jobs:
         with:
           # Who to greet
           who-to-greet: Nicruo
+  validate2:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo another job
+      - name: fancy-echo
+        uses: logesh-kumar/fancy-echo@v1.2.0
+        with:
+          # Who to greet
+          who-to-greet: Nicruo
       
